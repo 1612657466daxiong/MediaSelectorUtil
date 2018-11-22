@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">galleyMediaUtil</string>
+
+    <string name="can_select_photo_max">选择照片最大数量</string>
+    <string name="all_photo">所有照片</string>
+    <string name="please_choose_image">请选择照片</string>
+    <string name="confirm">确定</string>
+
+
+    <string name="picture_empty_title">无视频或照片\n</string>
+    <string name="picture_error">图片已损坏</string>
+    <string name="picture_video_error">视频已损坏</string>
+    <string name="picture_audio_error">音频已损坏</string>
+
+    <string name="picture_all_audio">所有音频</string>
+    <string name="picture_camera_roll">所有图片</string>
+    <string name="picture_tape">录音</string>
+    <string name="picture_photograph">拍照</string>
+    <string name="picture_take_picture">拍摄</string>
+    <string name="picture_long_chart">长图</string>
+    <string name="picture_done_front_num">（%1$d/%2$d）确定</string>
+    <string name="picture_sure_number">（%1$d）确定</string>
+    <string name="picture_completed">已完成</string>
+
+    <string name="picture_record_video">录视频</string>
+    <string name="picture_record_audio">录音</string>
+    <string name="picture_cancel">取消</string>
+
+    <string name="picture_message_max_num">你最多可以选择%1$d张图片</string>
+    <string name="picture_min_video_num">视频最低选择不能少于%1$d个</string>
+    <string name="picture_message_video_max_num">你最多可以选择%1$d个文件</string>
+    <string name="picture_min_img_num">图片最低选择不能少于%1$d张</string>
+</resources>

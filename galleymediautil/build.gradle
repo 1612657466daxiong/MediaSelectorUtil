@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+android {
+    compileSdkVersion 27
+    lintOptions {
+        abortOnError false
+    }
+//
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation('com.mylhyl:acp:1.1.7') {
+        exclude group: 'com.android.support'
+    }
+
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.chrisbanes.photoview:library:1.2.3'
+    implementation 'com.android.support:support-annotations:25.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation ('com.github.yalantis:ucrop:2.2.1') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    testImplementation 'junit:junit:4.12'
+}
+
+//--------------------------------------上传jcenter----------------------------
+//这是新版本申请通过之后用这个
+publish {
+    userOrg = 'xqw'//bintray.com用户名
+    groupId = 'com.yiqi'//jcenter上的路径
+    artifactId = 'gallerymediautil'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = ''//描述，不重要
+    website = 'https://github.com/tanghongbin/galleryimageUtil'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}

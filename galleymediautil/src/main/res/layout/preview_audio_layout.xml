@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dialog_shadow"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/tv_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名字"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/close"
+            android:id="@+id/audio_preview_cloase"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+        <LinearLayout
+            android:layout_below="@id/tv_music_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|center_vertical">
+            <ImageView
+                android:id="@+id/picture_audio_control"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/stop_audio"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_musicTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@color/tab_color_false"
+                android:textSize="12sp" />
+
+
+            <SeekBar
+                android:id="@+id/music_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:max="100"
+                android:progressDrawable="@drawable/picture_layer_progress"
+                android:thumb="@drawable/p_seekbar_thumb_normal"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:thumbOffset="0dp" />
+
+            <!--显示总进度-->
+            <TextView
+                android:id="@+id/tv_musicTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/music_seekbar"
+                android:text="00:00"
+                android:textColor="@color/tab_color_false"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
